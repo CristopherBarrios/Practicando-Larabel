@@ -24,4 +24,17 @@ class TodosController extends Controller
         $todos = Todo::all();
         return view('todos.index', ['todos' => $todos]);
     }
+
+    public function show(){
+        $todos = Todo::all();
+        return view('todos.index', ['todos' => $todos]);
+    }
+    public function update(){
+        $todos = Todo::all();
+        return view('todos.index', ['todos' => $todos]);
+    }
+    public function destroy(){
+        $todos = Todo::all();
+        return view('todos.index', ['todos' => $todos]);
+    }
 }
