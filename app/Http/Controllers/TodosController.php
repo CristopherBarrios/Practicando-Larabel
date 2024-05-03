@@ -29,9 +29,12 @@ class TodosController extends Controller
         $todo = Todo::find($id);
         return view('todos.show', ['todo' => $todo]);
     }
-    public function update(){
-        $todos = Todo::all();
-        return view('todos.index', ['todos' => $todos]);
+    public function update(Request $request, $id){
+        $todo = Todo::find($id);
+        $todo -> title = $request -> title;
+        $todo -> save();
+        // return view('todos.index', ['success' => 'Tarea Actualizada']);
+        return redirect()->route('todos')->with('success','Tarea realizada correctamente');
     }
     public function destroy(){
         $todos = Todo::all();
