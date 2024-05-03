@@ -13,7 +13,7 @@
   @enderror
   <div class="mb-3">
     <label for="title" class="form-label">Titulo de la Tarea</label>
-    <input type="text" name="title" class="form-control" >
+    <input type="text" name="title" class="form-control">
   </div>
   <button type="submit" class="btn btn-primary">Crear</button>
 </form>
