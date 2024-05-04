@@ -36,8 +36,9 @@ class TodosController extends Controller
         // return view('todos.index', ['success' => 'Tarea Actualizada']);
         return redirect()->route('todos')->with('success','Tarea realizada correctamente');
     }
-    public function destroy(){
-        $todos = Todo::all();
-        return view('todos.index', ['todos' => $todos]);
+    public function destroy($id){
+        $todo = Todo::find($id);
+        $todo -> delete();
+        return redirect()->route('todos')->with('success','Tarea eliminada correctamente');
     }
 }
